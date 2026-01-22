@@ -5,21 +5,21 @@
 class DdevMngr < Formula
   desc "CLI tool to manage DDEV projects with interactive TUI"
   homepage "https://github.com/dkd-dobberkau/ddev-mngr"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dkd-dobberkau/ddev-mngr/releases/download/v0.1.0/ddev-mngr_0.1.0_darwin_amd64.tar.gz"
-      sha256 "90176d282bb42fcb2fc701929684e1bb563c4e7345351e1bacf0c5ca8f1749c5"
+      url "https://github.com/dkd-dobberkau/ddev-mngr/releases/download/v0.2.0/ddev-mngr_0.2.0_darwin_amd64.tar.gz"
+      sha256 "080d09d38b029b3f73c5e0b2f7c0f5def7f5003adad21158b682b71da280e336"
 
       def install
         bin.install "ddev-mngr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dkd-dobberkau/ddev-mngr/releases/download/v0.1.0/ddev-mngr_0.1.0_darwin_arm64.tar.gz"
-      sha256 "aed44da6281fdc02eb0f43ab9a80774df88b6cccfce482ff027e56fdf4035663"
+      url "https://github.com/dkd-dobberkau/ddev-mngr/releases/download/v0.2.0/ddev-mngr_0.2.0_darwin_arm64.tar.gz"
+      sha256 "edeead8367696728aaa72d5c51129f41d5a57b0b847ea3f82895dc02d33740b3"
 
       def install
         bin.install "ddev-mngr"
@@ -29,15 +29,15 @@ class DdevMngr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkd-dobberkau/ddev-mngr/releases/download/v0.1.0/ddev-mngr_0.1.0_linux_amd64.tar.gz"
-      sha256 "052d6732b9706cf0c6fc05a54eea7d94cf005ff60af8123a1d7edff045302861"
+      url "https://github.com/dkd-dobberkau/ddev-mngr/releases/download/v0.2.0/ddev-mngr_0.2.0_linux_amd64.tar.gz"
+      sha256 "2e9008c737ea16b7bb4819935ea39a5fffb00be553f5cddde2cf1c61b92d5d69"
       def install
         bin.install "ddev-mngr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkd-dobberkau/ddev-mngr/releases/download/v0.1.0/ddev-mngr_0.1.0_linux_arm64.tar.gz"
-      sha256 "ff2fd645a8c30f6fa6593767ad4d0800d5237b194d1f3e672e8fad4abacc6ad6"
+      url "https://github.com/dkd-dobberkau/ddev-mngr/releases/download/v0.2.0/ddev-mngr_0.2.0_linux_arm64.tar.gz"
+      sha256 "dfc1e767889b7678c4e926cc870a2cec1c61333f9503935bf20e9ef4aa2fa8df"
       def install
         bin.install "ddev-mngr"
       end
