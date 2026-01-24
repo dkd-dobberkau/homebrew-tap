@@ -1,20 +1,20 @@
 class ClaudeInsightsAgent < Formula
   desc "Sync Claude Code sessions to team server"
   homepage "https://github.com/dkd-dobberkau/claude-insights-agent"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.1.0/claude-insights-agent-darwin-arm64"
-      sha256 "2cf62e95a9625df4a810bd21c9e6e3845041273797a49123b7743ac9bd462d11"
+      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.2.0/claude-insights-agent-darwin-arm64"
+      sha256 "e15d335ac5dc401fc569b853797af52e30a65351f2e359c92227faf350142239"
 
       def install
         bin.install "claude-insights-agent-darwin-arm64" => "claude-insights-agent"
       end
     else
-      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.1.0/claude-insights-agent-darwin-amd64"
-      sha256 "b74105825ab3408b79ed828c711cff65cff238b00a92fed3c3cc6e46a0004855"
+      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.2.0/claude-insights-agent-darwin-amd64"
+      sha256 "f3dbf3e16475abbcdb6b8f553ab180c64051092c92d2f070409ff1f77f4eb3c7"
 
       def install
         bin.install "claude-insights-agent-darwin-amd64" => "claude-insights-agent"
@@ -24,15 +24,15 @@ class ClaudeInsightsAgent < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.1.0/claude-insights-agent-linux-arm64"
-      sha256 "ea1ea9b02ab1d2248b95c5f08cee14a98169431065f17729a8a74251fd590961"
+      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.2.0/claude-insights-agent-linux-arm64"
+      sha256 "6a930850d9583a687ffc0f7e35fd68e16d66291efd3d1adff17706195c930d3f"
 
       def install
         bin.install "claude-insights-agent-linux-arm64" => "claude-insights-agent"
       end
     else
-      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.1.0/claude-insights-agent-linux-amd64"
-      sha256 "093bd8d8a207f946ceb6534ffb7180b812a5ea7a5ecd1d98a27a8a4e8cc28994"
+      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.2.0/claude-insights-agent-linux-amd64"
+      sha256 "2bdb2641b82a1b5cfe10e83fea8c5e32c3d4063e2cbb9d51de2818d9938e4b6b"
 
       def install
         bin.install "claude-insights-agent-linux-amd64" => "claude-insights-agent"
