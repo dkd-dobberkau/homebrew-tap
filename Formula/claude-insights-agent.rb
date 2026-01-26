@@ -5,21 +5,21 @@
 class ClaudeInsightsAgent < Formula
   desc "Sync Claude Code sessions to team server"
   homepage "https://github.com/dkd-dobberkau/claude-insights-agent"
-  version "0.3.4"
+  version "0.3.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.3.4/claude-insights-agent-darwin-amd64"
-      sha256 "f3ccb241637cf20c9845c796ed5bb17b897b2487db0a1b7d0d7c1d3cc0ae598e"
+      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.3.5/claude-insights-agent-darwin-amd64"
+      sha256 "087266f186758ebb6695d75592b1c17ef46c6db8a85d1fd56087510820e3cb0a"
 
       def install
         bin.install "claude-insights-agent-darwin-amd64" => "claude-insights-agent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.3.4/claude-insights-agent-darwin-arm64"
-      sha256 "e9e26fb65fbfe7327d406df9280f870af5120498194b33a42af6218515f1010c"
+      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.3.5/claude-insights-agent-darwin-arm64"
+      sha256 "cb9fec0587c5f34be8db7d040bdcc0a611f0188559b78c5d2018df3ee074699b"
 
       def install
         bin.install "claude-insights-agent-darwin-arm64" => "claude-insights-agent"
@@ -29,15 +29,15 @@ class ClaudeInsightsAgent < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.3.4/claude-insights-agent-linux-amd64"
-      sha256 "7380d5dfdf8597cac693e4a26df2a942ed43be806e6e7116c9fe26ba3cd0be75"
+      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.3.5/claude-insights-agent-linux-amd64"
+      sha256 "8eb1b6784e41ef37e473cceea93b53317852037e68c6ce1d95857eb3c0be428f"
       def install
         bin.install "claude-insights-agent-linux-amd64" => "claude-insights-agent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.3.4/claude-insights-agent-linux-arm64"
-      sha256 "29994453084f37b808ef9462971d26fa0a13b025a55a1b8bc74073d6529bf8b5"
+      url "https://github.com/dkd-dobberkau/claude-insights-agent/releases/download/v0.3.5/claude-insights-agent-linux-arm64"
+      sha256 "d6160da3792766568777a5d6c9bbbde6cae66b7132e953a4d60a0c6266a34b63"
       def install
         bin.install "claude-insights-agent-linux-arm64" => "claude-insights-agent"
       end
