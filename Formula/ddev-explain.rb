@@ -5,21 +5,21 @@
 class DdevExplain < Formula
   desc "CLI tool that summarizes DDEV project configurations"
   homepage "https://github.com/dkd-dobberkau/ddev-explain"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dkd-dobberkau/ddev-explain/releases/download/v0.2.0/ddev-explain_0.2.0_darwin_amd64.tar.gz"
-      sha256 "0c9d044ee29cb69761c70bde27d6f8dac1f48866a76246782440c4298f64723a"
+      url "https://github.com/dkd-dobberkau/ddev-explain/releases/download/v0.3.0/ddev-explain_0.3.0_darwin_amd64.tar.gz"
+      sha256 "4be4ea5f71543cfb9bb683819553220510dfa32df7b47d90cf34177e60bba6a7"
 
       def install
         bin.install "ddev-explain"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dkd-dobberkau/ddev-explain/releases/download/v0.2.0/ddev-explain_0.2.0_darwin_arm64.tar.gz"
-      sha256 "dd4552dbadb602d0dfaaad638b0c946f193dd246d0870336e45258c74363136e"
+      url "https://github.com/dkd-dobberkau/ddev-explain/releases/download/v0.3.0/ddev-explain_0.3.0_darwin_arm64.tar.gz"
+      sha256 "860c7d8df305957d780e6bf0cf8ec032905f73b4775728056e11f3f73dbe5a5a"
 
       def install
         bin.install "ddev-explain"
@@ -29,15 +29,15 @@ class DdevExplain < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkd-dobberkau/ddev-explain/releases/download/v0.2.0/ddev-explain_0.2.0_linux_amd64.tar.gz"
-      sha256 "7e3f16999d92bf884f9dcb33ba908898219b36ee735f763e63f50331f63f2ddb"
+      url "https://github.com/dkd-dobberkau/ddev-explain/releases/download/v0.3.0/ddev-explain_0.3.0_linux_amd64.tar.gz"
+      sha256 "16a254a39077c14153c435a2e562c96c2d440edcd4eec2733a789e3927b01954"
       def install
         bin.install "ddev-explain"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkd-dobberkau/ddev-explain/releases/download/v0.2.0/ddev-explain_0.2.0_linux_arm64.tar.gz"
-      sha256 "af8f2dfdf583e657f066a98778069d6c45a279e5e12004eebb2306cecc43ec83"
+      url "https://github.com/dkd-dobberkau/ddev-explain/releases/download/v0.3.0/ddev-explain_0.3.0_linux_arm64.tar.gz"
+      sha256 "e47f4326a541f977e446ba9acf43e4e2c254b890e9b94b9e09c5e5258628a2ac"
       def install
         bin.install "ddev-explain"
       end
