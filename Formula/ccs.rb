@@ -5,21 +5,21 @@
 class Ccs < Formula
   desc "Claude Code Summary - local usage stats in your terminal"
   homepage "https://github.com/dkd-dobberkau/ccs"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dkd-dobberkau/ccs/releases/download/v0.1.0/ccs-darwin-amd64"
-      sha256 "934c0a09913b9b7b28973548eec17d8a61beaf106e46128433ad64261707a1f3"
+      url "https://github.com/dkd-dobberkau/ccs/releases/download/v0.2.0/ccs-darwin-amd64"
+      sha256 "a8df37b7dcb7865b20d5e018b5a093073135554afa719f563b9bb77b31eee450"
 
       def install
         bin.install "ccs-darwin-amd64" => "ccs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dkd-dobberkau/ccs/releases/download/v0.1.0/ccs-darwin-arm64"
-      sha256 "a0661685563ba7b8405161372851eeabffccfcfc9bbc74cad65dba14e34fcb21"
+      url "https://github.com/dkd-dobberkau/ccs/releases/download/v0.2.0/ccs-darwin-arm64"
+      sha256 "2ce78fb41792ea3beacc6dde94f8d42773418500d4eb47befd4cadf6b479477b"
 
       def install
         bin.install "ccs-darwin-arm64" => "ccs"
@@ -29,15 +29,15 @@ class Ccs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkd-dobberkau/ccs/releases/download/v0.1.0/ccs-linux-amd64"
-      sha256 "f9bc7d27fa8027e245b478efffb9d35618cdc7dc20615ded6bdc4b9f54193abf"
+      url "https://github.com/dkd-dobberkau/ccs/releases/download/v0.2.0/ccs-linux-amd64"
+      sha256 "7f84e0eac8df2bde2b8aa73a85a949c31d2405618947289845015be8a2a5ae03"
       def install
         bin.install "ccs-linux-amd64" => "ccs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkd-dobberkau/ccs/releases/download/v0.1.0/ccs-linux-arm64"
-      sha256 "e2da16251d7e704cc186dcb138cbada85964292a6998457bfe4ea80e12fb5a67"
+      url "https://github.com/dkd-dobberkau/ccs/releases/download/v0.2.0/ccs-linux-arm64"
+      sha256 "30461f1cca233b10c2674e8508af8e9def268d7e25eaba19097cba137f7b8875"
       def install
         bin.install "ccs-linux-arm64" => "ccs"
       end
