@@ -1,8 +1,8 @@
 class DkdSprintTracker < Formula
   desc "macOS menu bar app showing the current dkd sprint number and working day"
   homepage "https://github.com/dkd-dobberkau/DkdSprintTracker"
-  url "https://github.com/dkd-dobberkau/DkdSprintTracker/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "367c251fb1cd8f403e6ce9a8beb0c0bafe81ee6ce754642ec55bc3a0792ddfa0"
+  url "https://github.com/dkd-dobberkau/DkdSprintTracker/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "59c3ef83dd16d2e79ea1122f1a57d1d77f904b7c667092d74e4caba159a90b62"
   license "MIT"
 
   depends_on :macos
@@ -11,10 +11,12 @@ class DkdSprintTracker < Formula
   def install
     system "swiftc", "-o", "DkdSprintTracker-arm64",
            "-framework", "Cocoa",
+           "-framework", "ServiceManagement",
            "-target", "arm64-apple-macos13",
            "DkdSprintTracker.swift"
     system "swiftc", "-o", "DkdSprintTracker-x86_64",
            "-framework", "Cocoa",
+           "-framework", "ServiceManagement",
            "-target", "x86_64-apple-macos13",
            "DkdSprintTracker.swift"
     system "lipo", "-create", "-output", "DkdSprintTracker",
