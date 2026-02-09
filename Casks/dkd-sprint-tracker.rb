@@ -1,6 +1,6 @@
 cask "dkd-sprint-tracker" do
   version "1.2.0"
-  sha256 "86302b365a33fbac5f4f255fde8f8d0a0128edf4b108a2002f5dffc5df8b6e94"
+  sha256 "c7b5d928016ba1dbd0416e3c29371d383ae55822e87d651d9633bb07c1515699"
 
   url "https://github.com/dkd-dobberkau/DkdSprintTracker/releases/download/v#{version}/dkd-Sprint-Tracker-v#{version}.zip"
   name "dkd Sprint Tracker"
