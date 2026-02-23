@@ -3,7 +3,7 @@ cask "squirrel" do
   name "squirrel"
   desc "Find your forgotten Claude Code projects"
   homepage "https://github.com/dkd-dobberkau/squirrel"
-  version "0.2.0"
+  version "0.2.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,23 +14,31 @@ cask "squirrel" do
   on_macos do
     on_intel do
       url "https://github.com/dkd-dobberkau/squirrel/releases/download/v#{version}/squirrel_#{version}_darwin_amd64.tar.gz"
-      sha256 "d653cde0b75b8cc32ed150f4794a9c962b9f4ee8f21c206cba06deefe46c3a49"
+      sha256 "7bd8f8a96d61ad8666d2758783915c36ed20f6fb38037ca8fa876124063fddf2"
     end
     on_arm do
       url "https://github.com/dkd-dobberkau/squirrel/releases/download/v#{version}/squirrel_#{version}_darwin_arm64.tar.gz"
-      sha256 "b4c60a3c351469999cada37b8f0099e6901e913547d650f198f16517a1286056"
+      sha256 "56e2ae8a374be126aa5a8eb556e4057cce51fde19391fcff3ccfb6e07b326e35"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dkd-dobberkau/squirrel/releases/download/v#{version}/squirrel_#{version}_linux_amd64.tar.gz"
-      sha256 "cdf2daeb6da30adff383e31710baf7050fa707c1f850f7dde72c6d8ceb37e910"
+      sha256 "534d8638b3365266eec5ce4aed7a7741ce8a87e05e4b5ab08bcc7fba60e43e99"
     end
     on_arm do
       url "https://github.com/dkd-dobberkau/squirrel/releases/download/v#{version}/squirrel_#{version}_linux_arm64.tar.gz"
-      sha256 "0853987d9cb9422bc9ea3c82581f040bcc4c95fdb3d92c044a91a8c1d61cde6a"
+      sha256 "7d1d3e2edf417a7479c5c127cc0d7c4b0f9b84e5c98fa8e7458cd317decabbf5"
     end
+  end
+
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-d", "com.apple.quarantine", "#{staged_path}/squirrel"]
+  end
+
+  caveats do
+    "If macOS blocks the binary, run: xattr -d com.apple.quarantine $(which squirrel)"
   end
 
   # No zap stanza required
