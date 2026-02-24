@@ -3,7 +3,7 @@ cask "squirrel" do
   name "squirrel"
   desc "Find your forgotten Claude Code projects"
   homepage "https://github.com/dkd-dobberkau/squirrel"
-  version "0.4.0"
+  version "0.5.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "squirrel" do
   on_macos do
     on_intel do
       url "https://github.com/dkd-dobberkau/squirrel/releases/download/v#{version}/squirrel_#{version}_darwin_amd64.tar.gz"
-      sha256 "91eb91ebe35e9e2ad62305d5c9519dd2bfb3f81b3debb7f01ebaacc0ea3b4af1"
+      sha256 "f848fb08878ac0995c6834017393bd6c2c2ba3e6882c0ed1a958dc35b5a4ba4a"
     end
     on_arm do
       url "https://github.com/dkd-dobberkau/squirrel/releases/download/v#{version}/squirrel_#{version}_darwin_arm64.tar.gz"
-      sha256 "8e7d24ac9da12a8b565f2263e988333556ef976291ca1d4070a08493eecde8b9"
+      sha256 "d1195e5a1a0599c9a3127e577e9584b62ceec56392938db13ab7013e7e7d1611"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dkd-dobberkau/squirrel/releases/download/v#{version}/squirrel_#{version}_linux_amd64.tar.gz"
-      sha256 "753e5c93322daf567a1f93aac97e3b8b04daaa31c87609116f0467bf467805d3"
+      sha256 "a090786dcfba913d71f8364818b6f8ba4bed6dff3fdf48e5da191ad248bbadf7"
     end
     on_arm do
       url "https://github.com/dkd-dobberkau/squirrel/releases/download/v#{version}/squirrel_#{version}_linux_arm64.tar.gz"
-      sha256 "e835dfe5fe542f6be9137bdd3200ff5f3c7ff56045536e0a987a40c6fa6caa6e"
+      sha256 "d07ed00b9bf86a742adb9351fd3d14b4e14d25b261ad17558e9534cb8398555b"
     end
   end
 
