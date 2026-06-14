@@ -7,7 +7,7 @@ cask "dkd-sprint-tracker" do
   desc "macOS menu bar app showing the current dkd sprint number and working day"
   homepage "https://github.com/dkd-dobberkau/DkdSprintTracker"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "dkd Sprint Tracker.app"
 
